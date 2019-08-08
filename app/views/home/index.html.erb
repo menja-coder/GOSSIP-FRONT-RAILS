@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta name="viewport" content="width=device-width"/>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 style= " color: MediumBlue; margin-left: 33%; margin-top: 50px">Bienvenue  <%= @user%> dans ce SUPER GOSSIP</h1>
+    <h2 style= "font-size: 22px; color: blue">Voici les gossips existants:</h2>
+<div class="#" style="display: flex; flex-wrap: wrap; padding-top: 50px">
+    <!--<%= @gossip.each do |gossip|%>-->
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><strong>Titre:</strong>  <%= gossip.title %></h5>
+            <input type="button" value="Affiche les potins" onclick="document.location.href='gossip/<%=gossip.id%>';" style="background-color: lime">
+            <input type="button" value="Apropos de l'auteur" onclick="document.location.href='auteur/<%=gossip.user.id%>';" style="background-color: lime">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--<%end%>-->   <br>
+
+
+  </body>
+</div>
+</html>
