@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'faker'
 ruby '2.6.3'
 gem 'table_print'
+gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0.rc2'
 # Use postgresql as the database for Active Record

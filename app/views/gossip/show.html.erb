@@ -2,3 +2,8 @@
 
 <strong>Contenu:</strong> <%= @show_gossip.content %> </br>
 <strong>Date de création:</strong> <%= @show_gossip.created_at %> </br>
+
+
+<input type="button" value="Editer" onclick="document.location.href='<%=edit_gossip_path(@show_gossip.id)%>';" style="background-color: lime">
+
+<a href="<%= gossip_path(@show_gossip.id) %>" class= "btn btn-danger" data-confirm ="êtes vous sur ?" data-method="DELETE"> Supprimer </a>

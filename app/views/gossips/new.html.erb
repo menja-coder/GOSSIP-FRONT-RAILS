@@ -1,0 +1,33 @@
+
+
+<html>
+    <head>
+        <title>form tag</title>
+        <style>
+            body {
+                text-align:center;
+            }
+            h1 {
+                color:green;
+            }
+        </style>
+    </head>
+    <div class="alert alert-success" role="alert">
+    </div>
+    <body>
+        <h1>Créer gossip</h1>
+
+          <%= form_tag url_for(action: 'create'), method: "post" do %>
+            Titre Gossip:
+            <%= text_field_tag 'title', @gossips.title %>
+            <br><br>
+            Votre Gossip:
+            <%= text_area_tag 'content', @gossips.content %>
+            <br><br>
+            <%= submit_tag "Créer Gossip" %>
+        <% end %>
+    </body>
+    <div class="alert alert-success" role="alert">
+    </div>
+
+</html>
